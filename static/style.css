@@ -12,14 +12,20 @@ body {
     text-align: center;
 }
 
+/* Table container for responsiveness */
+.table-container {
+    width: 80%;
+    overflow-x: auto; /* Allows horizontal scrolling if the table overflows */
+    margin-top: 20px;
+}
 
 /* Table styling */
 table {
     border-collapse: collapse;
-    width: 80%;
-    margin-top: 20px;
+    width: 100%; /* Make sure table width adapts to the container */
     margin-bottom: 20px;
     border: 2px solid #f7f7f7; /* Light border for contrast */
+    table-layout: fixed; /* Ensures that the table content doesn't overflow */
 }
 
 /* Table header and data styling */
@@ -27,6 +33,7 @@ th, td {
     padding: 12px;
     text-align: center;
     border: 1px solid #f7f7f7;
+    word-wrap: break-word; /* Prevents overflow */
 }
 
 /* Header row */
@@ -76,4 +83,56 @@ input[type="text"] {
 input[type="text"]:focus {
     outline: none;
     border-color: #ffcc00; /* Yellow border when focused */
+}
+
+/* Responsive Styles */
+
+/* For smaller screens like mobile devices */
+@media (max-width: 768px) {
+    .table-container {
+        width: 90%; /* Increase table container width for smaller screens */
+    }
+
+    table {
+        width: 100%; /* Ensure the table takes up full container width */
+    }
+
+    input[type="text"] {
+        width: 80%; /* Increase input width for mobile */
+    }
+
+    button {
+        width: 60%; /* Increase button width on smaller screens */
+    }
+
+    body {
+        height: auto; /* Allow body height to adjust on smaller screens */
+    }
+
+    th, td {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+}
+
+/* For very small screens like mobile phones in portrait mode */
+@media (max-width: 480px) {
+    input[type="text"] {
+        width: 100%; /* Full width for the input field on very small screens */
+    }
+
+    button {
+        width: 80%; /* Full width for the button on very small screens */
+    }
+
+    .table-container {
+        width: 100%; /* Full width for the table container on very small screens */
+    }
+
+    table {
+        width: 100%; /* Full width for the table on very small screens */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce padding further on very small screens */
+    }
 }

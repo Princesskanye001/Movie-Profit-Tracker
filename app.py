@@ -10,9 +10,7 @@ df = pd.read_csv(DATA_FILE)
 
 @app.route("/")
 def home():
-    # Display the first 10 rows by default
-    data = df.head(10).to_dict(orient="records")
-    return render_template("index.html", data=data)
+    return render_template("index.html", data=None)
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
