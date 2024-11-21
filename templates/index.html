@@ -13,6 +13,7 @@
         <input type="text" name="query" placeholder="Search by movie name" value="{{ query | default('') }}">
         <button type="submit">Search</button>
     </form>
+    
     {% if data %}
         <div class="table-container">
             <table>
@@ -42,8 +43,11 @@
                 </tbody>
             </table>
         </div>
-    {% else %}
+    {% elif query %}
         <p>Opps movie doesn't exit in our system.Please try searching another movie</p>
     {% endif %}
 </body>
 </html>
+
+        
+ 
