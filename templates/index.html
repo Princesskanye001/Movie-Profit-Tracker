@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Profit Tracker</title>
-    <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <h1>Movie Data Viewer</h1>
+    <form method="post" action="/search">
+        <input type="text" name="query" placeholder="Search by movie name" value="{{ query | default('') }}">
+        <button type="submit">Search</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Country</th>
+                <th>Budget</th>
+                <th>Gross</th>
+                <th>Profit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.genre }}</td>
+                <td>{{ row.year }}</td>
+                <td>{{ row.country }}</td>
+                <td>{{ "{:,.2f}".format(row.budget) }}</td>
+                <td>{{ "{:,.2f}".format(row.gross) }}</td>
+                <td>{{ "{:,.2f}".format(row.profit) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     
 </body>
 </html>
