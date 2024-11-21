@@ -1,8 +1,8 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
-    color: #f7f7f7; /* Light text for contrast */
+    background-color: #1a1a1a; 
+    color: #f7f7f7; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,17 +15,17 @@ body {
 /* Table container for responsiveness */
 .table-container {
     width: 80%;
-    overflow-x: auto; /* Allows horizontal scrolling if the table overflows */
+    overflow-x: auto; 
     margin-top: 20px;
 }
 
 /* Table styling */
 table {
     border-collapse: collapse;
-    width: 100%; /* Make sure table width adapts to the container */
+    width: 100%; 
     margin-bottom: 20px;
-    border: 2px solid #f7f7f7; /* Light border for contrast */
-    table-layout: fixed; /* Ensures that the table content doesn't overflow */
+    border: 2px solid #f7f7f7; 
+    table-layout: fixed;
 }
 
 /* Table header and data styling */
@@ -33,46 +33,47 @@ th, td {
     padding: 12px;
     text-align: center;
     border: 1px solid #f7f7f7;
-    word-wrap: break-word; /* Prevents overflow */
+    word-wrap: break-word; 
 }
 
 /* Header row */
 th {
-    background-color: #ff7c02; /* Yellow background */
-    color: #1a1a1a; /* Dark text for contrast */
+    background-color: #ff7c02;
+    color: #1a1a1a; 
     font-weight: bold;
 }
 
 /* Table rows */
 tr:nth-child(even) {
-    background-color: #444444; /* Dark background for even rows */
+    background-color: #444444; 
 }
 
 tr:nth-child(odd) {
-    background-color: #444444; /* Slightly lighter background for odd rows */
+    background-color: #444444; 
 }
 
 /* Button styling */
 button {
-    background-color: #ff7c02; /* Yellow button */
-    color: #1a1a1a; /* Dark text */
+    background-color: #ff7c02; 
+    color: #1a1a1a; 
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
-    width: 30%;
+    width: 40%;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #f05b05; /* Darker yellow on hover */
+    background-color: #f05b05; 
 }
 
 /* Input field styling */
 input[type="text"] {
     padding: 10px;
+    padding-right: 10px;
     margin-top: 10px;
     width: 60%;
     font-size: 16px;
@@ -82,7 +83,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #ffcc00; /* Yellow border when focused */
+    border-color: #ffcc00; /
 }
 
 /* Responsive Styles */
@@ -90,49 +91,49 @@ input[type="text"]:focus {
 /* For smaller screens like mobile devices */
 @media (max-width: 768px) {
     .table-container {
-        width: 90%; /* Increase table container width for smaller screens */
+        width: 90%; 
     }
 
     table {
-        width: 100%; /* Ensure the table takes up full container width */
+        width: 100%; 
     }
 
     input[type="text"] {
-        width: 80%; /* Increase input width for mobile */
+        width: 80%; 
     }
 
     button {
-        width: 60%; /* Increase button width on smaller screens */
+        width: 60%; 
     }
 
     body {
-        height: auto; /* Allow body height to adjust on smaller screens */
+        height: auto;
     }
 
     th, td {
-        padding: 10px; /* Reduce padding for small screens */
+        padding: 10px; 
     }
 }
 
 /* For very small screens like mobile phones in portrait mode */
 @media (max-width: 480px) {
     input[type="text"] {
-        width: 100%; /* Full width for the input field on very small screens */
+        width: 100%; 
     }
 
     button {
-        width: 80%; /* Full width for the button on very small screens */
+        width: 80%;
     }
 
     .table-container {
-        width: 100%; /* Full width for the table container on very small screens */
+        width: 100%; 
     }
 
     table {
-        width: 100%; /* Full width for the table on very small screens */
+        width: 100%; 
     }
 
     th, td {
-        padding: 8px; /* Reduce padding further on very small screens */
+        padding: 8px;
     }
 }
