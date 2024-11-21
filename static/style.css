@@ -11,6 +11,9 @@ body {
     flex-direction: column;
     text-align: center;
 }
+.h1{
+    size: 5px;
+}
 
 /* Table container for responsiveness */
 .table-container {
