@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1 class="header">Movie Data Viewer</h1>
+    <h1 class="header">Movie Profit Tracker</h1>
     <h1>Welcome to Movie Profit Tracker, Search your favourite movie and find out how much Profit it made!</h1>
     <form method="post" action="/search">
         <input type="text" name="query" placeholder="Search by movie name" value="{{ query | default('') }}">
